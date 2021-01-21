@@ -23,10 +23,16 @@ namespace CoreEscuela.Entidades
         // }
 
         public Escuela(string nombre, int año) => (Nombre, AñoDeCreacion) = (nombre, año);
+        public Escuela(string nombre, int año, TiposEscuela tipos, string pais = "", string ciudad = "")
+        {
+            (Nombre, AñoDeCreacion) = (nombre, año);
+            Pais = pais;
+            Ciudad = ciudad;
+        }
 
         public override string ToString()
         {
-            return $"Nombre {Nombre}, Tipo {TipoEscuela} \n Pais {Pais}m Ciudad {Ciudad}";
+            return $"Nombre {Nombre}, Tipo {TipoEscuela} \n Pais {Pais} Ciudad {Ciudad}";
         }
     }
 }
