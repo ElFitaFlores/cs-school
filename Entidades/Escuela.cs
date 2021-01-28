@@ -1,3 +1,4 @@
+using System;
 namespace CoreEscuela.Entidades
 {
     class Escuela
@@ -33,6 +34,18 @@ namespace CoreEscuela.Entidades
         public override string ToString()
         {
             return $"Nombre {Nombre}, Tipo {TipoEscuela} \n Pais {Pais} Ciudad {Ciudad}";
+        }
+
+        public Curso[] Cursos { get; set; }
+
+        public void ImprimirCursos()
+        {
+            int contador = 0;
+            while (contador < this.Cursos.Length)
+            {
+                Console.WriteLine($"El nombre del curso es {this.Cursos[contador].Nombre}");
+                contador += 1;
+            }
         }
     }
 }

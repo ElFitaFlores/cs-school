@@ -10,22 +10,17 @@ namespace Etapa1
             var escuela = new Escuela("Platzi Academy", 1992, TiposEscuela.Secundaria, pais: "Guatemala", ciudad: "Guate");
             escuela.TipoEscuela = TiposEscuela.Primaria;
 
-            var arregloCursos = new Curso[2];
-
-            arregloCursos[0] = new Curso()
-            {
-                Nombre = "101",
-            };
-
-            arregloCursos[1] = new Curso()
-            {
-                Nombre = "102",
+            escuela.Cursos = new Curso[] {
+                new Curso(){ Nombre = "101" },
+                new Curso(){ Nombre = "201" },
+                new Curso(){ Nombre = "301" },
             };
             Console.WriteLine(escuela.Nombre);
             Console.WriteLine(escuela);
             // Console.WriteLine(curso1.UniqueId);
             // Console.WriteLine(curso2.UniqueId);
-            ImprimirCursos(arregloCursos);
+            //ImprimirCursos(arregloCursos);
+            escuela.ImprimirCursos();
         }
 
         private static void ImprimirCursos(Curso[] arregloCursos)
