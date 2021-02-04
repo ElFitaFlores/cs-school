@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 namespace CoreEscuela.Entidades
 {
     class Escuela
@@ -36,7 +38,7 @@ namespace CoreEscuela.Entidades
             return $"Nombre {Nombre}, Tipo {TipoEscuela} \n Pais {Pais} Ciudad {Ciudad}";
         }
 
-        public Curso[] Cursos { get; set; }
+        public List<Curso> Cursos { get; set; }
 
         public void ImprimirCursos()
         {
