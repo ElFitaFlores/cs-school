@@ -27,6 +27,7 @@ namespace Etapa1
             escuela.Cursos.Add(tmp);
             otraColeccion.Clear();
             escuela.Cursos.Remove(tmp);
+            escuela.Cursos.RemoveAll((Curso cur) => cur.Nombre == "101");
             Console.WriteLine(escuela.Nombre);
             Console.WriteLine(escuela);
             escuela.ImprimirCursos();
