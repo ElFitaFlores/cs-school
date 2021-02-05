@@ -23,21 +23,13 @@ namespace Etapa1
                 new Curso() { Nombre = "701" },
             };
             escuela.Cursos.AddRange(otraColeccion);
+            Curso tmp = new Curso { Nombre = "Vacacional" };
+            escuela.Cursos.Add(tmp);
             otraColeccion.Clear();
-            escuela.Cursos.Remove();
+            escuela.Cursos.Remove(tmp);
             Console.WriteLine(escuela.Nombre);
             Console.WriteLine(escuela);
             escuela.ImprimirCursos();
-        }
-
-        private static void ImprimirCursos(Curso[] arregloCursos)
-        {
-            int contador = 0;
-            while (contador < arregloCursos.Length)
-            {
-                Console.WriteLine($"El nombre del curso es {arregloCursos[contador].Nombre}");
-                contador += 1;
-            }
         }
     }
 }

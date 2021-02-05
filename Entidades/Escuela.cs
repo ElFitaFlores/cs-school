@@ -43,9 +43,9 @@ namespace CoreEscuela.Entidades
         public void ImprimirCursos()
         {
             int contador = 0;
-            while (contador < this.Cursos.Length)
+            foreach (Curso curso in this.Cursos)
             {
-                Console.WriteLine($"El nombre del curso es {this.Cursos[contador].Nombre}");
+                Console.WriteLine($"El nombre del curso es {curso.Nombre}");
                 contador += 1;
             }
         }
