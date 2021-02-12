@@ -1,6 +1,5 @@
 ﻿using System;
-using CoreEscuela.Entidades;
-using System.Collections.Generic;
+using CoreEscuela.Util;
 
 namespace CoreEscuela
 {
@@ -9,7 +8,10 @@ namespace CoreEscuela
         static void Main(string[] args)
         {
             var engine = new EscuelaEngine();
+            Printer.DibujarLinea(20);
+            Printer.DibujarTitulo("Escuela");
             Console.WriteLine(engine.Escuela);
+            Printer.MyBeep();
         }
     }
 }
