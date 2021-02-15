@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CoreEscuela.Entidades
 {
@@ -6,6 +7,13 @@ namespace CoreEscuela.Entidades
     {
         public string UniqueId { get; private set; }
         public string Nombre { get; set; }
+
+        public Alumno Alumno { get; set; }
+        public Asignatura Asignatura { get; set; }
+        public float Nota { get; set; }
+
+        public List<Asignatura> Asignaturas { get; set; }
+        public List<Alumno> Alumnos { get; set; }
 
         public TiposJornada Jornada { get; set; }
 
