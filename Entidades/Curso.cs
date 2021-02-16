@@ -13,7 +13,7 @@ namespace CoreEscuela.Entidades
         public float Nota { get; set; }
 
         public List<Asignatura> Asignaturas { get; set; }
-        public List<Alumno> Alumnos { get; set; }
+        public IEnumerable<Alumno> Alumnos { get; set; }
 
         public TiposJornada Jornada { get; set; }
 
